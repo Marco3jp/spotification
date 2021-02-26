@@ -39,13 +39,9 @@ fn main() {
 }
 
 fn get_now_playing_message(metadata: Metadata) -> String {
-    let mut artists = String::new();
-
-    for artist in metadata.artists().unwrap() {
-        artists += artist; // 現状SpotifyはD-Busで一件のアーティストしか渡さないためスペースを開けたりしていないが、将来的に改善が必要になるかもしれない
-    }
-
+    let artists = metadata.artists().unwrap().join(", ");
     let song_title = metadata.title().unwrap();
+
     return format!("今は{}の{}を聴いているよ！", artists, song_title);
 }
 
