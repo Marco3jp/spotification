@@ -2,6 +2,7 @@
 Description=spotification timer
 
 [Timer]
+OnBootSec=30seconds
 OnUnitActiveSec=30seconds
 
 [Install]
