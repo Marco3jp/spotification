@@ -1,0 +1,9 @@
+[Unit]
+Description=call spotification service
+
+[Service]
+ExecStart=/path/to/bin/spotification
+Type=oneshot
+
+[Install]
+WantedBy=default.target

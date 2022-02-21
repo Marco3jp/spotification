@@ -1,0 +1,9 @@
+[Unit]
+Description=spotification timer
+
+[Timer]
+OnUnitActiveSec=30seconds
+
+[Install]
+WantedBy=timers.target
+
